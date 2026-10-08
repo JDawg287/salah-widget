@@ -1,0 +1,52 @@
+{
+  "type": "AdaptiveCard",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Salah Times settings",
+      "weight": "Bolder",
+      "size": "Medium"
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "method",
+      "label": "Calculation method",
+      "style": "compact",
+      "value": "${method}",
+      "choices": [
+        {
+          "$data": "${methods}",
+          "title": "${title}",
+          "value": "${value}"
+        }
+      ]
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "school",
+      "label": "Asr time",
+      "style": "expanded",
+      "value": "${school}",
+      "choices": [
+        { "title": "Standard (Shafiʿi, Maliki, Hanbali)", "value": "0" },
+        { "title": "Hanafi", "value": "1" }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Execute",
+      "title": "Save",
+      "verb": "save",
+      "style": "positive"
+    },
+    {
+      "type": "Action.Execute",
+      "title": "Cancel",
+      "verb": "cancel",
+      "associatedInputs": "none"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+# Build output
+bin/
+obj/
+artifacts/
+TestResults/
+*.binlog
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Packages and signing material: never commit these
+*.msix
+*.msixbundle
+*.msixupload
+*.appx
+*.appxbundle
+*.cer
+*.pfx
+*.p12
+*.snk
+
+# Local runtime data (in case it gets copied into the repo)
+prayer-cache.json
+location.json
+widget.log

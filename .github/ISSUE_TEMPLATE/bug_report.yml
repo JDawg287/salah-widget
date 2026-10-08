@@ -1,0 +1,79 @@
+name: Bug report
+description: Something isn't working as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug.
+        **Security problems:** please don't file them here. See SECURITY.md and report privately instead.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you see, and what did you expect to see instead? Screenshots of the widget help a lot.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Add the medium widget
+        2. Open Customize and choose Hanafi
+        3. ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install-method
+    attributes:
+      label: Install method
+      options:
+        - Quick install (Developer Mode, Register-DevPackage.ps1)
+        - Signed install (New-DevCert / Build-Package / Install-Package)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: size
+    attributes:
+      label: Widget size
+      multiple: true
+      options:
+        - Small
+        - Medium
+        - Large
+        - Customize menu
+        - Not size-specific
+
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      description: Run `winver` and copy the version and OS build, e.g. "24H2 (OS Build 26100.4351)".
+    validations:
+      required: true
+
+  - type: input
+    id: region
+    attributes:
+      label: Regional format / language
+      description: Settings → Time & language → Language & region → Regional format, e.g. "Arabic (Saudi Arabia)". Calendar and number formats can affect the widget.
+
+  - type: input
+    id: commit
+    attributes:
+      label: Commit or version
+      description: The output of `git rev-parse --short HEAD` in your clone, or the version you installed.
+
+  - type: textarea
+    id: log
+    attributes:
+      label: Log excerpt
+      description: |
+        Relevant lines from `%LOCALAPPDATA%\SalahWidget\widget.log`.
+        The log contains your approximate city and coordinates. Remove anything you don't want to share.
+      render: text
