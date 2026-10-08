@@ -4,7 +4,7 @@ All notable changes to this project are documented here. The format follows [Kee
 
 ## [Unreleased]
 
-## [1.0.0] - Unreleased
+## [1.0.0] - 2026-10-07
 
 ### Added
 - Windows 11 Widgets board provider showing today's prayer times and a countdown to the next salah, in small, medium and large sizes.
@@ -14,3 +14,6 @@ All notable changes to this project are documented here. The format follows [Kee
 - Offline cache, so the widget renders instantly after a restart and works without a connection.
 - Install scripts for Developer Mode (`Register-DevPackage.ps1`) and for a signed install without Developer Mode (`New-DevCert.ps1`, `Build-Package.ps1`, `Install-Package.ps1`), plus `Uninstall-Package.ps1`.
 - Unit tests and GitHub Actions CI (x64 and ARM64 builds, tests, MSIX layout validation).
+
+[Unreleased]: https://github.com/JDawg287/salah-widget/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/JDawg287/salah-widget/releases/tag/v1.0.0
